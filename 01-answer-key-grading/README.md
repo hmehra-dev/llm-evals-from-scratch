@@ -71,7 +71,7 @@ F = 2PR / (P + R)
 1. Implements all four metrics using only `collections`, `math` and `re`.
 2. Checks BLEU against [`sacrebleu`](https://github.com/mjpost/sacrebleu) and ROUGE against Google's [`rouge-score`](https://pypi.org/project/rouge-score/). Both agree to four decimal places.
 3. Shows three cases where overlap metrics give the wrong verdict: a correct paraphrase, a negated sentence, and a wrong fact in otherwise identical wording.
-4. Ends with a few exercises.
+4. Ends with a few exercises. Worked answers are in [`solutions.ipynb`](./solutions.ipynb).
 
 ## Takeaway
 
