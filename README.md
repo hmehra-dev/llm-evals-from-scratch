@@ -19,6 +19,14 @@ A comparison I keep coming back to: evaluating an LLM is a lot like grading a st
 
 Each module folder contains a `README.md` with the theory and a `notebook.ipynb` with the implementation. Everything runs on CPU with small hand-made datasets.
 
+The metrics are also collected in a small package, `evals/`, so they can be imported into other projects:
+
+```python
+from evals.metrics import token_f1, corpus_bleu, rouge_l
+
+token_f1("The Eiffel Tower in Paris.", ["Eiffel Tower"])  # 0.667
+```
+
 ## Setup
 
 ```bash
@@ -31,6 +39,12 @@ jupyter notebook
 ```
 
 Tested with Python 3.13.
+
+To run the tests, which check every metric against hand calculations and against `sacrebleu` and `rouge-score`:
+
+```bash
+python -m pytest
+```
 
 ## Approach
 
